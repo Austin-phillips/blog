@@ -1,0 +1,23 @@
+<h1>
+  Editing: <%= @page.title %>
+</h1>
+
+<hr />
+
+<%= form_for @page do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br />
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br />
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <br />
+  <%= f.label :public %>
+  <%= f.check_box :public %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Cancel', page_path(@page) %>

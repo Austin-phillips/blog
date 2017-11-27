@@ -1,0 +1,32 @@
+<h1>New Blog Post</h1>
+
+<!--<form method='/pages' action='POST'>
+  <input required name='title' placeholder='Blog Title' />
+  <br />
+  <input required name='author' placeholder='Blog Author' />
+  <br />
+  <textarea required name='content' placeholder='Blog Content'></textarea>
+  <br />
+  <input type='checkbox' name='public' />
+  <br />
+  <input type='submit' />
+</form>
+-->
+
+<%= form_for @page do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br />
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br />
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <br />
+  <%= f.label :public %>
+  <%= f.check_box :public %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back', pages_path, class: 'btn green' %>
